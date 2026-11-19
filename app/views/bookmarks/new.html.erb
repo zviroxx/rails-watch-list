@@ -1,0 +1,12 @@
+
+<div class="container mt-5">
+  <h1>Add a movie</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie,
+  prompt: "choose a movie" %>
+
+  <%= f.input :comment%>
+  <%= f.button :submit, "add a movie", class: "btn btn-outline-primary" %>
+  <% end %>
+  <%= link_to "back to list", list_path(@list) %>
+</div>
