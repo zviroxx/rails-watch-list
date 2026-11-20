@@ -15,7 +15,7 @@
     </nav>
     <div class="cards">
        <% @lists.each do |rest| %>
-       <div class="card-category container card-pers" style="background-image: url(https://th.bing.com/th/id/OIP.u86CivzOcai6CSdsuxDgBwHaDe?w=310&h=164&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3)">
+       <div class="card-category container card-pers" style="background-image: url('<%= cl_image_path rest.photo.key %>')">
             <%= link_to "#{rest.name}", list_path(rest) %>
         </div>
        <% end %>
